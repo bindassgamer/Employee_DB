@@ -1,0 +1,686 @@
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter_18pt-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter_18pt-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter_18pt-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter_18pt-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter_18pt-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter_18pt-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter_18pt-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter_18pt-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter_18pt-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter_18pt-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter_18pt-ExtraLightItalic.ttf")
+    format("truetype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter_18pt-LightItalic.ttf")
+    format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter_18pt-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter_18pt-MediumItalic.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter_18pt-SemiBoldItalic.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter_18pt-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter_18pt-ExtraBoldItalic.ttf")
+    format("truetype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter_18pt-BlackItalic.ttf")
+    format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --bg: #f5f8ff;
+  --panel: #ffffff;
+  --line: #d8d8d8;
+  --text: #46505a;
+  --muted: #8c8c8c;
+  --brand: #4678be;
+  --brand-strong: #2d67b5;
+  --pink: #ff3278;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: Inter, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+.login-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.login-wave {
+  position: absolute;
+  inset: auto 0 50% 0;
+  height: 380px;
+  background: linear-gradient(155deg, #4f8bd2 0%, #3e74b9 60%, #3869a8 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 58%, 0 88%);
+}
+
+.login-card {
+  width: min(430px, calc(100% - 32px));
+  background: var(--panel);
+  border: 2px solid #a3a3a3;
+  border-radius: 8px;
+  padding: 26px;
+  z-index: 1;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.2);
+}
+
+.brand-lockup h1 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 700;
+  color: #f300a8;
+}
+
+.brand-logo {
+  width: 130px;
+  height: auto;
+  display: block;
+}
+
+.brand-lockup p {
+  margin: 2px 0 14px;
+  color: var(--brand);
+  font-size: 13px;
+}
+
+.login-card h2 {
+  margin: 8px 0 16px;
+  color: var(--brand);
+}
+
+.login-form {
+  display: grid;
+  gap: 14px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--brand);
+}
+
+.field input,
+.field select {
+  width: 100%;
+  border: 1px solid #979797;
+  border-radius: 2px;
+  height: 34px;
+  padding: 0 10px;
+  outline: none;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 2px rgba(70, 120, 190, 0.15);
+}
+
+.primary-cta,
+.create-btn,
+.save-btn {
+  border: 0;
+  border-radius: 2px;
+  background: var(--brand);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.primary-cta {
+  height: 36px;
+}
+
+.primary-cta:hover,
+.create-btn:hover,
+.save-btn:hover {
+  background: var(--brand-strong);
+}
+
+.inline-error {
+  margin: 0;
+  color: #b52f2f;
+  font-size: 12px;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 188px 1fr;
+}
+
+.sidebar {
+  border-right: 1px solid #c9d9ed;
+  background: #fff;
+}
+
+.logo {
+  height: 60px;
+  display: grid;
+  place-items: center;
+  border-bottom: 1px solid #c9d9ed;
+}
+
+.logo img {
+  height: 28px;
+  width: auto;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  height: 40px;
+  border: 1px solid #d6d6d6;
+  border-top: 0;
+  background: #fff;
+  color: var(--brand);
+  text-align: left;
+  padding: 0 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.side-item img {
+  width: 18px;
+  height: 18px;
+}
+
+.side-item.active {
+  background: #dbeaff;
+  color: #0e729e;
+}
+
+.workspace {
+  display: grid;
+  grid-template-rows: 60px auto 1fr auto;
+  min-width: 0;
+}
+
+.topbar {
+  border-bottom: 1px solid #d6d6d6;
+  background: #fff;
+  padding: 0 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 24px;
+  color: var(--brand);
+}
+
+.profile-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50px;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.profile-btn img {
+  width: 32px;
+  height: 32px;
+}
+
+.toolbar {
+  padding: 14px 28px 8px;
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.search-wrap {
+  width: min(420px, 100%);
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+
+.search-wrap input {
+  width: 100%;
+  height: 34px;
+  border: 1px solid #4678be;
+  border-radius: 999px;
+  padding: 0 14px 0 34px;
+}
+
+.create-btn {
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.create-btn img {
+  width: 50px;
+  height: 50px;
+}
+
+.table-card {
+  margin: 8px 28px 0;
+  border: 1px solid #d3d3d3;
+  background: #fff;
+  min-height: 220px;
+}
+
+.table-wrap {
+  overflow: auto;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 980px;
+}
+
+.employee-table th,
+.employee-table td {
+  border-bottom: 1px solid #d3d3d3;
+  border-right: 1px solid #d3d3d3;
+  text-align: left;
+  font-size: 12px;
+  padding: 10px 8px;
+  white-space: nowrap;
+}
+
+.employee-table th:last-child,
+.employee-table td:last-child {
+  border-right: 0;
+}
+
+.employee-table th {
+  background: #f9f5ff;
+  color: var(--brand);
+}
+
+.photo-link {
+  color: var(--brand);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.photo-link img {
+  width: 20px;
+  height: 20px;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none; /* Helps remove default browser styling */
+}
+input[type="file"]::file-selector-button {
+  display: none; /* Hides the browse button */
+}
+
+.action-dots {
+  display: inline-grid;
+  place-items: center;
+  padding: 2px 4px;
+  border: 1px solid #f7c3d8;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.action-dots img {
+  width: 20px;
+  height: 10px;
+}
+
+.empty-state {
+  min-height: 200px;
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  color: #6a6a6a;
+}
+
+.empty-state-icon {
+  width: 68px;
+  height: 68px;
+}
+
+.empty-state-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: #d2e9ff;
+  stroke: #4678be;
+  stroke-width: 1.8;
+}
+
+.empty-state-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.loading {
+  padding: 36px;
+  text-align: center;
+}
+
+.table-footer {
+  margin: 8px 28px 16px;
+  border: 1px solid #d3d3d3;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  font-size: 13px;
+  background: #fff;
+}
+
+.pagination {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #d3d3d3;
+}
+
+.pagination button,
+.pagination span {
+  height: 30px;
+  min-width: 38px;
+  border: 0;
+  background: #fff;
+  border-right: 1px solid #d3d3d3;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+}
+
+.pagination span {
+  min-width: 74px;
+  color: #4f4f4f;
+}
+
+.pagination button:last-child {
+  border-right: 0;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: grid;
+  place-items: center;
+  z-index: 9;
+  padding: 20px;
+}
+
+.create-modal {
+  width: min(960px, 100%);
+  border: 1px solid #969696;
+  background: #fff;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+.create-modal header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  border-bottom: 1px solid #cfd6e0;
+  border-top: 4px solid var(--pink);
+}
+
+.create-modal h2 {
+  margin: 0;
+  color: var(--brand);
+}
+
+.create-modal header button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: #7a7a7a;
+}
+
+.modal-grid {
+  padding: 22px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px 18px;
+}
+
+.icon-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("./assets/icons/dropdown-custom.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 13px;
+  padding-right: 34px;
+}
+
+.date-input {
+  background-image: url("./assets/icons/date-icon.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 14px;
+  padding-right: 34px;
+}
+
+.photo-input {
+  background-image: url("./assets/icons/photo.svg");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 14px;
+  padding-right: 34px;
+}
+
+.modal-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.save-btn {
+  min-width: 70px;
+  height: 30px;
+}
+
+@media (max-width: 1100px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .modal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .toolbar,
+  .table-card,
+  .table-footer {
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+
+  .topbar {
+    padding: 0 14px;
+  }
+
+  .toolbar {
+    flex-direction: column;
+  }
+
+  .search-wrap {
+    width: 100%;
+  }
+
+  .modal-grid {
+    grid-template-columns: 1fr;
+  }
+}
