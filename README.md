@@ -74,6 +74,18 @@ npm run dev
 
 Frontend runs on `http://localhost:5173`.
 
+### 3) Create an Admin
+
+Run this command after starting the server.
+Run in Terminal/CMD/Powershell
+
+```bash
+curl -Method POST http://localhost:5000/api/auth/register `
+  -ContentType "application/json" `
+  -Body '{"fullName":"Admin User","username":"Your_username","email":"Your_email","password":"Your_password"}'
+```
+Comment the register API after making the admin!!!
+
 ## Available Scripts
 
 ### Client (`client/package.json`)
